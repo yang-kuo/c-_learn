@@ -1,7 +1,7 @@
 // my first cpp program
 #include <iostream>
 // using namespace std;
-
+#include <cmath>
 int main(void)
 {
 	using std::cout;
@@ -15,5 +15,10 @@ int main(void)
 	cout << "you input number is: "<< num3 << endl;
 	std::cout << "num1 + num2 = " << num1 + num2 << "!" << std::endl;
 	std::cout << "this is the first cpp program!" << std::endl;
- 	return 0;
+ 	// 函数简单使用
+	int x;
+	x = sqrt(64);  // 返回某个数的开根号
+	cout << x <<endl;
+
+	return 0;
 }
