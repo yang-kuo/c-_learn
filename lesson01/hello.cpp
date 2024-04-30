@@ -5,9 +5,8 @@ using namespace std;
 int main(void)
 {
 	int num1 = 3;
-	int num2 = 5;
+	int num2 = 5; // define a number
 	std::cout << "num1 + num2 = " << num1 + num2 << "!" << std::endl;
 	std::cout << "this is the first cpp program!" << std::endl;
  	return 0;
 }
-
