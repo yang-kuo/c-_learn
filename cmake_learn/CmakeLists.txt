@@ -1,0 +1,29 @@
+#这是一个学习CMakeLists.txt的文件
+cmake_minimum_required(VERSION 3.0.0)  # 使用cmake的最小版本限制
+project("cmake_learn")  # 指定工程名字
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/)  # 包含头文件路径
+# add_executable(cmake_learn add.cpp main.cpp sub.cpp show.cpp)  #（生成的可执行程序名称 原.cpp文件）
+# set(SRC_LIST main.cpp add.cpp sub.cpp show.cpp)
+# add_executable(cmake_learn ${SRC_LIST})  # 第四行的写法等于第五行加第六行，第五六行更整洁
+set(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/build)  # 这样可以讲可执行程序的输出地址改为任意位置
+set(EXECUTABLE_OUTPUT_PATH ${OUTPUT})
+# file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp) # 将src文件夹下的所有文件存为一个列表返回到SRC_LIST中
+
+# link_libraries(libcalc.a)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/)  # 使用链接库来生成可执行文件
+
+# 其中CMAKE_CURRENT_SOURCE_DIR代表CMakeLists.txt所在的目录
+# 其中src文件夹存放.cpp源文件，include文件夹存放所有的头文件，build文件夹是用来编译生成可执行文件的文件夹
+add_executable(cmake_learn ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)  # 生成可执行文件
+# 生成静态/动态链接库
+# set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+# set(SRC_LINK ${CMAKE_CURRENT_SOURCE_DIR}/src/add.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/show.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/sub.cpp)
+# add_library(calc STATIC ${SRC_LINK})  # 将源文件生成静态链接库
+# add_library(calc SHARED ${SRC_LINK})  # 将源文件生成动态链接库
+# 动态链接库语句要写到整个CMakeLists.txt文件的最后
+target_link_libraries(cmake_learn libcalc.dylib)  #第一个参数表示谁要链接动态链接库，第二个文件表示动态链接库名称
+
+
+
+
+

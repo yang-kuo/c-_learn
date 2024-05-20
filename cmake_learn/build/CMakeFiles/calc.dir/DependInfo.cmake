@@ -1,0 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/yangkuo/个人文件/Learn_program/cpp_learn/cmake_learn/src/add.cpp" "CMakeFiles/calc.dir/src/add.cpp.o" "gcc" "CMakeFiles/calc.dir/src/add.cpp.o.d"
+  "/Users/yangkuo/个人文件/Learn_program/cpp_learn/cmake_learn/src/show.cpp" "CMakeFiles/calc.dir/src/show.cpp.o" "gcc" "CMakeFiles/calc.dir/src/show.cpp.o.d"
+  "/Users/yangkuo/个人文件/Learn_program/cpp_learn/cmake_learn/src/sub.cpp" "CMakeFiles/calc.dir/src/sub.cpp.o" "gcc" "CMakeFiles/calc.dir/src/sub.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")
